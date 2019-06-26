@@ -1,1 +1,11 @@
 // Specific CSS for your home-page
+.wrapper {
+  margin: auto;
+  padding: 20px;
+  width: 50%;
+  height: 50vh;
+  border: 3px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

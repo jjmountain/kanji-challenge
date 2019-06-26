@@ -1,7 +1,7 @@
 class KanjiCard < ApplicationRecord
   belongs_to :user
   belongs_to :kanji
-  validates :kanji_id, uniqueness: true
+  validates :kanji_id, uniqueness: true, presence: true
 
 
   MAX_GRADE = 5

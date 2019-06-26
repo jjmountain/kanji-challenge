@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :kanjis, only: [ :index ]
       resources :core_words, only: [ :index ]
-      resources :kanji_cards, only: [ :index ]
+      resources :kanji_cards, only: [ :index, :show, :update, :create, :destroy ]
     end
   end
 end
