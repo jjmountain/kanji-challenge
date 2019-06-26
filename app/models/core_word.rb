@@ -1,0 +1,3 @@
+class CoreWord < ApplicationRecord
+
+end
