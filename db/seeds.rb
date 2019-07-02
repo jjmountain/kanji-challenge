@@ -52,21 +52,21 @@ core2000_filepath = 'db/Japanese_Core_2000_Step_01_Listening_Sentence_Vocab_+_Im
 
 puts "Deleting Core2000..."
 
-Core2000.delete_all
+CoreWord.delete_all
 
 puts "Reading Core filepath"
 
-core2000 = JSON.parse(File.read(core2000_filepath))
+core_words = JSON.parse(File.read(core2000_filepath))
 
 puts "Creating Core2000 Objects"
 
-core2000['notes'].each do |note|
+core_words['notes'].each do |note|
   mp3 = note['fields'][3].scan(/\w*.mp3/)[0]
   pic = note['fields'][4].scan(/\w*.jpg/)[0]
   if note['fields'][6] == 'sentence'
     note_answer = note['fields'][2].scan(/<b>.*<\/b>/)[0].delete('</b>')
   end
-  Core2000.create!(
+  CoreWord.create!(
     expression: note['fields'][0],
     meaning: note['fields'][1],
     reading: note['fields'][2],

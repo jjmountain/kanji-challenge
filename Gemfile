@@ -16,6 +16,7 @@ gem 'font-awesome-sass', '~> 5.6.1'
 gem 'pundit'
 gem 'sassc-rails'
 gem 'simple_form'
+gem 'simple_token_authentication'
 gem 'uglifier'
 gem 'webpacker'
 gem 'dotenv-rails', groups: [:development, :test]
