@@ -6,6 +6,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :kanji_cards, dependent: :destroy
   after_create :create_cards
+  validates :jlpt_level, inclusion: { in: [1, 2, 3, 4, 5], message: "%{value} is not a valid JLPT level" }
 
   private
 
