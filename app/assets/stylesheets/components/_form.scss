@@ -23,13 +23,14 @@
   padding: 0px 20px;
 }
 
+.form-email {
+  flex: 1;
+}
+
 .form-jlpt {
   display: flex;
   justify-content: center;
-}
-
-.form-email {
-  padding-left: 1.7em;
+  flex: 1;
 }
 
 .form-actions{
@@ -39,8 +40,6 @@
   flex-direction: column;
 }
 
-.user_email {
-}
 .user_jlpt_level {
   display: flex;
   justify-content: flex-end;
@@ -54,7 +53,7 @@
 }
 
 #user_email {
-  width: 250px;
+  width: 100%;
 }
 
 .form-login .btn {

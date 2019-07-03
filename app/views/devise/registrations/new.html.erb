@@ -7,10 +7,12 @@
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= f.error_notification %>
           <div class='form-names'>
+          <div class='form-email'>
             <%= f.input :email,
                         required: true,
                         autofocus: true,
                         input_html: { autocomplete: "email" }%>
+          </div>
             <div class='form-jlpt'>
             <%= f.input :jlpt_level,
                           collection: 1..5,
